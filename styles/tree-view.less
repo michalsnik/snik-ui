@@ -6,13 +6,21 @@
 // Overrides: atom/tree-view
 
 
-.tree-view-resizer {
-  border-right: 1px solid @base-border-color;
+.header.project-root-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  height: @tab-height;
+  padding-left: 5px;
+  line-height: @tab-height !important;
+  background: darken(@tree-view-background-color, 5%);
 }
 
 .tree-view {
   color: @text-color;
   background-color: @tree-view-background-color;
+  padding: @tab-height 0 0 0;
 
   .list-item.selected {
     color: @text-color-selected;

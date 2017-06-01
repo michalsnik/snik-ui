@@ -1,16 +1,3 @@
-
-// UI Variables
-// -------------------
-
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
-
-// Overrides: atom/static/variables/ui-variables.less
-
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
-
 // Text Colors
 @text-color:           hsl(0,0%,66%);
 @text-color-subtle:    hsl(0,0%,50%);
@@ -33,8 +20,8 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: darken(#1c1c38, 2%);
+@base-border-color:     #1c1c38; // red; // darken(@base-background-color, 8%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -61,10 +48,10 @@
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-background-color;
-@tab-bar-border-color:        @base-border-color;
+@tab-bar-border-color:        @tab-bar-background-color;
 @tab-background-color:        @tab-bar-background-color;
-@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
-@tab-border-color:            @base-border-color;
+@tab-background-color-active: @tab-bar-background-color;
+@tab-border-color:            @tab-bar-background-color;
 
 @tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
@@ -82,12 +69,12 @@
 
 @disclosure-arrow-size: 12px;
 
-@component-padding: 10px;
+@component-padding: 14px;
 @component-icon-padding: 5px;
 @component-icon-size: 16px;
 @component-line-height: 25px;
 
-@tab-height: 30px;
+@tab-height: 36px;
 
 // Misc
 @component-border-radius: 2px;

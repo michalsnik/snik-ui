@@ -5,12 +5,22 @@
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
 
-
 .tree-view {
   color: @text-color;
   background-color: @tree-view-background-color;
 
+  .list-group li:not(.list-nested-item),
+  .list-tree li:not(.list-nested-item),
+  .list-group li.list-nested-item > .list-item,
+  .list-tree li.list-nested-item > .list-item {
+    color: #555382;
+  }
+
   .list-item.selected {
-    color: @text-color-selected;
+    color: @text-color-selected !important;
+
+    &::before {
+      background: @tree-view-item-hover-bg;
+    }
   }
 }
